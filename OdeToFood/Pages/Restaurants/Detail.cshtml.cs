@@ -14,15 +14,14 @@ namespace OdeToFood.Pages.Restaurants
             _restaurantData = restaurantData;
         }
 
+        [TempData] public string Message { get; set; }
+
         public Restaurant Restaurant { get; set; }
 
         public IActionResult OnGet(int restaurantId)
         {
             Restaurant = _restaurantData.GetById(restaurantId);
-            if (Restaurant == null)
-            {
-                return RedirectToPage("./NotFound");
-            }
+            if (Restaurant == null) return RedirectToPage("./NotFound");
 
             return Page();
         }

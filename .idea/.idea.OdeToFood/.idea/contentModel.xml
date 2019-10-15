@@ -44,6 +44,8 @@
           <e p="Restaurants" t="Include">
             <e p="Detail.cshtml" t="Include" />
             <e p="Detail.cshtml.cs" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Edit.cshtml.cs" t="Include" />
             <e p="List.cshtml" t="Include" />
             <e p="List.cshtml.cs" t="Include" />
             <e p="NotFound.cshtml" t="Include" />
