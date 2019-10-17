@@ -27,13 +27,18 @@ namespace OdeToFood
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IRestaurantData, InMemoryRestaurantData>();
+            services.AddDbContextPool<OdeToFoodDbContext>(options =>
+                {
+                    options.UseNpgsql(Configuration.GetConnectionString("OdeToFoodDb"));
+                });
             
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlite(
-                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IRestaurantData, SqlRestaurantData>();
+            
+//            services.AddDbContext<ApplicationDbContext>(options =>
+//                options.UseSqlite(
+//                    Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddEntityFrameworkStores<OdeToFoodDbContext>();
             services.AddRazorPages();
         }
 
