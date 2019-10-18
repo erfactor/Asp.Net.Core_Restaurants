@@ -43,7 +43,22 @@
           <e p="Index.cshtml.cs" t="Include" />
           <e p="Privacy.cshtml" t="Include" />
           <e p="Privacy.cshtml.cs" t="Include" />
+          <e p="R2" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Create.cshtml.cs" t="Include" />
+            <e p="Delete.cshtml" t="Include" />
+            <e p="Delete.cshtml.cs" t="Include" />
+            <e p="Details.cshtml" t="Include" />
+            <e p="Details.cshtml.cs" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Edit.cshtml.cs" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+            <e p="Index.cshtml.cs" t="Include" />
+          </e>
           <e p="Restaurants" t="Include">
+            <e p="_Summary.cshtml" t="Include" />
+            <e p="Delete.cshtml" t="Include" />
+            <e p="Delete.cshtml.cs" t="Include" />
             <e p="Detail.cshtml" t="Include" />
             <e p="Detail.cshtml.cs" t="Include" />
             <e p="Edit.cshtml" t="Include" />
@@ -51,12 +66,16 @@
             <e p="List.cshtml" t="Include" />
             <e p="List.cshtml.cs" t="Include" />
             <e p="NotFound.cshtml" t="Include" />
-            <e p="NotFound.cshtml.cs" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />
             <e p="_LoginPartial.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+            <e p="Components" t="Include">
+              <e p="RestaurantCount" t="Include">
+                <e p="Default.cshtml" t="Include" />
+              </e>
+            </e>
           </e>
         </e>
         <e p="Program.cs" t="Include" />
@@ -64,6 +83,9 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+        <e p="ViewComponents" t="Include">
+          <e p="RestaurantCountViewComponent.cs" t="Include" />
+        </e>
         <e p="wwwroot" t="Include">
           <e p="css" t="Include">
             <e p="site.css" t="Include" />
