@@ -1,17 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using OdeToFood.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OdeToFood.Data;
 
 namespace OdeToFood
 {
@@ -28,12 +23,12 @@ namespace OdeToFood
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContextPool<OdeToFoodDbContext>(options =>
-                {
-                    options.UseNpgsql(Configuration.GetConnectionString("OdeToFoodDb"));
-                });
-            
+            {
+                options.UseNpgsql(Configuration.GetConnectionString("OdeToFoodDb"));
+            });
+
             services.AddScoped<IRestaurantData, SqlRestaurantData>();
-            
+
 //            services.AddDbContext<ApplicationDbContext>(options =>
 //                options.UseSqlite(
 //                    Configuration.GetConnectionString("DefaultConnection")));
@@ -57,6 +52,8 @@ namespace OdeToFood
                 app.UseHsts();
             }
 
+            app.Use(SayHelloMiddleware);
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseNodeModules();
@@ -66,7 +63,22 @@ namespace OdeToFood
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints => { endpoints.MapRazorPages(); endpoints.MapControllers(); });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapRazorPages();
+                endpoints.MapControllers();
+            });
+        }
+
+        private RequestDelegate SayHelloMiddleware(RequestDelegate arg)
+        {
+            return async ctx =>
+            {
+                if (ctx.Request.Path.StartsWithSegments("/hello"))
+                    await ctx.Response.WriteAsync("Hello, World!");
+                else
+                    await arg(ctx);
+            };
         }
     }
 }
