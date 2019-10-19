@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration;
+using Microsoft.VisualStudio.Web.CodeGeneration;
 using OdeToFood.Core;
 using OdeToFood.Data;
 
@@ -27,6 +28,8 @@ namespace OdeToFood.Pages.Restaurants
         {
             Message = _config["Message"];
             Restaurants = _restaurantData.GetRestaurantsByName(SearchTerm);
+            ConsoleLogger logger  = new ConsoleLogger();
+            logger.LogMessage("ALEINBA TO SIE DZIEJE NAPRAWDE");
         }
     }
 }

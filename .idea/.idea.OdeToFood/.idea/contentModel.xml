@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="C:\Users\MSI\.nuget\packages\odetocode.usenodemodules\3.0.0\contentFiles\any\netcoreapp3.0\Properties\launchSettings.json" t="Include" />
     <e p="C:\Users\MSI\.Rider2019.2\config\consoles\db" t="IncludeRecursive" />
     <e p="C:\Users\MSI\.Rider2019.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\MSI\.Rider2019.2\config\javascript\extLibs\global-types\node_modules\@types\datatables.net" t="IncludeRecursive" />
     <e p="C:\Users\MSI\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\MSI\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_OdeToFood.1971957398.00" t="ExcludeRecursive" />
     <e p="C:\Users\MSI\RiderProjects\OdeToFood" t="IncludeFlat">
       <e p="OdeToFood" t="IncludeRecursive">
+        <e p="Api" t="Include">
+          <e p="RestaurantsController.cs" t="Include" />
+        </e>
         <e p="app.db" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
@@ -18,6 +23,7 @@
           </e>
         </e>
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include" />
         <e p="Data" t="Include">
           <e p="ApplicationDbContext.cs" t="Include" />
           <e p="Migrations" t="Include">
@@ -26,6 +32,7 @@
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
           </e>
         </e>
+        <e p="node_modules\datatables.net-bs4" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
@@ -34,6 +41,8 @@
           </e>
         </e>
         <e p="OdeToFood.csproj" t="IncludeRecursive" />
+        <e p="package-lock.json" t="Include" />
+        <e p="package.json" t="Include" />
         <e p="Pages" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
@@ -57,6 +66,8 @@
           </e>
           <e p="Restaurants" t="Include">
             <e p="_Summary.cshtml" t="Include" />
+            <e p="ClientRestaurants.cshtml" t="Include" />
+            <e p="ClientRestaurants.cshtml.cs" t="Include" />
             <e p="Delete.cshtml" t="Include" />
             <e p="Delete.cshtml.cs" t="Include" />
             <e p="Detail.cshtml" t="Include" />
