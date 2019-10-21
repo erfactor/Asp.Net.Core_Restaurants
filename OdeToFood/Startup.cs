@@ -28,6 +28,7 @@ namespace OdeToFood
             });
 
             services.AddScoped<IRestaurantData, SqlRestaurantData>();
+//            services.AddScoped<IRestaurantData, InMemoryRestaurantData>();
 
 //            services.AddDbContext<ApplicationDbContext>(options =>
 //                options.UseSqlite(

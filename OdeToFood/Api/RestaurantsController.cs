@@ -24,7 +24,7 @@ namespace OdeToFood.Api
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Restaurant>>> GetRestaurants()
         {
-            ConsoleLogger logger  = new ConsoleLogger();
+            var logger = new ConsoleLogger();
             return await _context.Restaurants.ToListAsync();
         }
 
@@ -34,10 +34,7 @@ namespace OdeToFood.Api
         {
             var restaurant = await _context.Restaurants.FindAsync(id);
 
-            if (restaurant == null)
-            {
-                return NotFound();
-            }
+            if (restaurant == null) return NotFound();
 
             return restaurant;
         }
@@ -48,10 +45,7 @@ namespace OdeToFood.Api
         [HttpPut("{id}")]
         public async Task<IActionResult> PutRestaurant(int id, Restaurant restaurant)
         {
-            if (id != restaurant.Id)
-            {
-                return BadRequest();
-            }
+            if (id != restaurant.Id) return BadRequest();
 
             _context.Entry(restaurant).State = EntityState.Modified;
 
@@ -62,13 +56,8 @@ namespace OdeToFood.Api
             catch (DbUpdateConcurrencyException)
             {
                 if (!RestaurantExists(id))
-                {
                     return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                throw;
             }
 
             return NoContent();
@@ -83,7 +72,7 @@ namespace OdeToFood.Api
             _context.Restaurants.Add(restaurant);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetRestaurant", new { id = restaurant.Id }, restaurant);
+            return CreatedAtAction("GetRestaurant", new {id = restaurant.Id}, restaurant);
         }
 
         // DELETE: api/Restaurants/5
@@ -91,10 +80,7 @@ namespace OdeToFood.Api
         public async Task<ActionResult<Restaurant>> DeleteRestaurant(int id)
         {
             var restaurant = await _context.Restaurants.FindAsync(id);
-            if (restaurant == null)
-            {
-                return NotFound();
-            }
+            if (restaurant == null) return NotFound();
 
             _context.Restaurants.Remove(restaurant);
             await _context.SaveChangesAsync();

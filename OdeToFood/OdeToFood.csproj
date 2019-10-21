@@ -5,6 +5,13 @@
         <UserSecretsId>aspnet-OdeToFood-B0C6B39F-AA05-4FC1-94AD-FF36E23A2B82</UserSecretsId>
     </PropertyGroup>
 
+    <Target Name="PostBuild" AfterTargets="ComputeFilesToPublish">
+        <Exec Command="npm install" />
+    </Target>
+    
+    <ItemGroup>
+        <Content Include="node_modules/**" CopyToPublishDirectory="PreserveNewest" />
+    </ItemGroup>
 
     <ItemGroup>
         <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />

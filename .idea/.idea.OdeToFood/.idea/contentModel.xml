@@ -32,7 +32,204 @@
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
           </e>
         </e>
-        <e p="node_modules\datatables.net-bs4" t="IncludeRecursive" />
+        <e p="node_modules" t="Include">
+          <e p="datatables.net" t="Include">
+            <e p="js" t="Include">
+              <e p="jquery.dataTables.js" t="Include" />
+              <e p="jquery.dataTables.min.js" t="Include" />
+            </e>
+            <e p="LICENSE.txt" t="Include" />
+            <e p="package.json" t="Include" />
+            <e p="Readme.md" t="Include" />
+          </e>
+          <e p="datatables.net-bs4" t="IncludeRecursive">
+            <e p="css" t="Include">
+              <e p="dataTables.bootstrap4.css" t="Include" />
+              <e p="dataTables.bootstrap4.min.css" t="Include" />
+            </e>
+            <e p="js" t="Include">
+              <e p="dataTables.bootstrap4.js" t="Include" />
+              <e p="dataTables.bootstrap4.min.js" t="Include" />
+            </e>
+            <e p="package.json" t="Include" />
+            <e p="Readme.md" t="Include" />
+          </e>
+          <e p="jquery" t="Include">
+            <e p="AUTHORS.txt" t="Include" />
+            <e p="bower.json" t="Include" />
+            <e p="dist" t="Include">
+              <e p="core.js" t="Include" />
+              <e p="jquery.js" t="Include" />
+              <e p="jquery.min.js" t="Include" />
+              <e p="jquery.min.map" t="Include" />
+              <e p="jquery.slim.js" t="Include" />
+              <e p="jquery.slim.min.js" t="Include" />
+              <e p="jquery.slim.min.map" t="Include" />
+            </e>
+            <e p="external" t="Include">
+              <e p="sizzle" t="Include">
+                <e p="dist" t="Include">
+                  <e p="sizzle.js" t="Include" />
+                  <e p="sizzle.min.js" t="Include" />
+                  <e p="sizzle.min.map" t="Include" />
+                </e>
+                <e p="LICENSE.txt" t="Include" />
+              </e>
+            </e>
+            <e p="LICENSE.txt" t="Include" />
+            <e p="package.json" t="Include" />
+            <e p="Readme.md" t="Include" />
+            <e p="src" t="Include">
+              <e p=".eslintrc.json" t="Include" />
+              <e p="ajax" t="Include">
+                <e p="jsonp.js" t="Include" />
+                <e p="load.js" t="Include" />
+                <e p="parseXML.js" t="Include" />
+                <e p="script.js" t="Include" />
+                <e p="var" t="Include">
+                  <e p="location.js" t="Include" />
+                  <e p="nonce.js" t="Include" />
+                  <e p="rquery.js" t="Include" />
+                </e>
+                <e p="xhr.js" t="Include" />
+              </e>
+              <e p="ajax.js" t="Include" />
+              <e p="attributes" t="Include">
+                <e p="attr.js" t="Include" />
+                <e p="classes.js" t="Include" />
+                <e p="prop.js" t="Include" />
+                <e p="support.js" t="Include" />
+                <e p="val.js" t="Include" />
+              </e>
+              <e p="attributes.js" t="Include" />
+              <e p="callbacks.js" t="Include" />
+              <e p="core" t="Include">
+                <e p="access.js" t="Include" />
+                <e p="camelCase.js" t="Include" />
+                <e p="DOMEval.js" t="Include" />
+                <e p="init.js" t="Include" />
+                <e p="isAttached.js" t="Include" />
+                <e p="nodeName.js" t="Include" />
+                <e p="parseHTML.js" t="Include" />
+                <e p="ready-no-deferred.js" t="Include" />
+                <e p="ready.js" t="Include" />
+                <e p="readyException.js" t="Include" />
+                <e p="stripAndCollapse.js" t="Include" />
+                <e p="support.js" t="Include" />
+                <e p="toType.js" t="Include" />
+                <e p="var" t="Include">
+                  <e p="rsingleTag.js" t="Include" />
+                </e>
+              </e>
+              <e p="core.js" t="Include" />
+              <e p="css" t="Include">
+                <e p="addGetHookIf.js" t="Include" />
+                <e p="adjustCSS.js" t="Include" />
+                <e p="curCSS.js" t="Include" />
+                <e p="finalPropName.js" t="Include" />
+                <e p="hiddenVisibleSelectors.js" t="Include" />
+                <e p="showHide.js" t="Include" />
+                <e p="support.js" t="Include" />
+                <e p="var" t="Include">
+                  <e p="cssExpand.js" t="Include" />
+                  <e p="getStyles.js" t="Include" />
+                  <e p="isHiddenWithinTree.js" t="Include" />
+                  <e p="rboxStyle.js" t="Include" />
+                  <e p="rnumnonpx.js" t="Include" />
+                  <e p="swap.js" t="Include" />
+                </e>
+              </e>
+              <e p="css.js" t="Include" />
+              <e p="Data" t="Include">
+                <e p="Data.js" t="Include" />
+                <e p="var" t="Include">
+                  <e p="acceptData.js" t="Include" />
+                  <e p="dataPriv.js" t="Include" />
+                  <e p="dataUser.js" t="Include" />
+                </e>
+              </e>
+              <e p="Data.js" t="Include" />
+              <e p="deferred" t="Include">
+                <e p="exceptionHook.js" t="Include" />
+              </e>
+              <e p="deferred.js" t="Include" />
+              <e p="deprecated.js" t="Include" />
+              <e p="dimensions.js" t="Include" />
+              <e p="effects" t="Include">
+                <e p="animatedSelector.js" t="Include" />
+                <e p="Tween.js" t="Include" />
+              </e>
+              <e p="effects.js" t="Include" />
+              <e p="event" t="Include">
+                <e p="ajax.js" t="Include" />
+                <e p="alias.js" t="Include" />
+                <e p="focusin.js" t="Include" />
+                <e p="support.js" t="Include" />
+                <e p="trigger.js" t="Include" />
+              </e>
+              <e p="event.js" t="Include" />
+              <e p="exports" t="Include">
+                <e p="amd.js" t="Include" />
+                <e p="global.js" t="Include" />
+              </e>
+              <e p="jquery.js" t="Include" />
+              <e p="manipulation" t="Include">
+                <e p="_evalUrl.js" t="Include" />
+                <e p="buildFragment.js" t="Include" />
+                <e p="getAll.js" t="Include" />
+                <e p="setGlobalEval.js" t="Include" />
+                <e p="support.js" t="Include" />
+                <e p="var" t="Include">
+                  <e p="rscriptType.js" t="Include" />
+                  <e p="rtagName.js" t="Include" />
+                </e>
+                <e p="wrapMap.js" t="Include" />
+              </e>
+              <e p="manipulation.js" t="Include" />
+              <e p="offset.js" t="Include" />
+              <e p="queue" t="Include">
+                <e p="delay.js" t="Include" />
+              </e>
+              <e p="queue.js" t="Include" />
+              <e p="selector-native.js" t="Include" />
+              <e p="selector-sizzle.js" t="Include" />
+              <e p="selector.js" t="Include" />
+              <e p="serialize.js" t="Include" />
+              <e p="traversing" t="Include">
+                <e p="findFilter.js" t="Include" />
+                <e p="var" t="Include">
+                  <e p="dir.js" t="Include" />
+                  <e p="rneedsContext.js" t="Include" />
+                  <e p="siblings.js" t="Include" />
+                </e>
+              </e>
+              <e p="traversing.js" t="Include" />
+              <e p="var" t="Include">
+                <e p="arr.js" t="Include" />
+                <e p="class2type.js" t="Include" />
+                <e p="concat.js" t="Include" />
+                <e p="document.js" t="Include" />
+                <e p="documentElement.js" t="Include" />
+                <e p="fnToString.js" t="Include" />
+                <e p="getProto.js" t="Include" />
+                <e p="hasOwn.js" t="Include" />
+                <e p="indexOf.js" t="Include" />
+                <e p="isFunction.js" t="Include" />
+                <e p="isWindow.js" t="Include" />
+                <e p="ObjectFunctionString.js" t="Include" />
+                <e p="pnum.js" t="Include" />
+                <e p="push.js" t="Include" />
+                <e p="rcheckableType.js" t="Include" />
+                <e p="rcssNum.js" t="Include" />
+                <e p="rnothtmlwhite.js" t="Include" />
+                <e p="slice.js" t="Include" />
+                <e p="support.js" t="Include" />
+                <e p="toString.js" t="Include" />
+              </e>
+              <e p="wrap.js" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
